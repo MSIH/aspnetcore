@@ -40,7 +40,7 @@ internal class ConfirmEmailModel<TUser> : ConfirmEmailModel where TUser : class
         _userManager = userManager;
     }
 
-    public override async Task<IActionResult> OnGetAsync(string userId, string code)
+    public override async Task<IActionResult> OnGetAsync(string userId, string code, string returnUrl)
     {
         if (userId == null || code == null)
         {
